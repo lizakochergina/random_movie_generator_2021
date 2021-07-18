@@ -1,0 +1,125 @@
+
+body{
+    text-align: center;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.h2_main {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 70%;
+}
+
+.genres{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px
+
+}
+
+.checkbox_button{
+    position: relative;
+    width: 130px;
+    height: 45px;
+    background-color: #d0e0ff;
+    border-radius: 30px;
+}
+
+.p_genre_title,
+.a_button{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.checkbox_input:checked ~ .checkbox_button {
+    background-color: #92b0ea;
+}
+
+.checkbox_input {
+    display: none
+}
+
+.input_raiting{
+    width: 40px;
+    height: 20px;
+    border-radius: 30px;
+    outline: none;
+    text-align:center
+}
+
+.input_submit{
+    border-radius: 30px;
+    height: 30px;
+    width: 110px;
+}
+
+section{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.movie_description{
+    display: inline-block;
+    width: 35%;
+    vertical-align: top;
+}
+
+.movie_img{
+    width: 250px;
+}
+
+.p_movie_description{
+    margin-top: 0;
+}
+
+.h2_sorry{
+    margin: 30px
+    margin-bottom: 30px;
+}
+
+.div_sorry,
+.div_again{
+    position: relative;
+    margin: auto;
+    width: 130px;
+    height: 45px;
+    border-radius: 30px;
+    background-color: #d0e0ff;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    cursor: default;
+}
+
+a:visited {
+    color: black;
+}
+
+a:active ~ .checkbox_button{
+    color: black;
+}
+
+.plot{
+    width: 80%;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 8px 10px;
+}
+
+th {
+    background-color: #d0e0ff;
+}
