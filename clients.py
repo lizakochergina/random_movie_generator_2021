@@ -108,14 +108,17 @@ class GetRandomMovie:
         movies = []
         for page_num in range(1, GetRandomMovie.MAX_NUM_PAGES):
             tmp = discover.discover_movies({
-                'primary_release_date.gte': '1900-01-01',  # смотрю фильмы, которые вышли после этой даты
-                'primary_release_date.lte': '2021-07-17',  # смотрю фильмы, которые вышли до этой даты
+                'primary_release_date.gte':
+                    '1900-01-01',  # смотрю фильмы, начиная с этой даты
+                'primary_release_date.lte':
+                    '2021-07-17',  # смотрю фильмы, заканчивая этой даты
                 'with_genres': str_genre_codes,
                 'page': page_num,
                 'vote_average.gte': self.raiting,
                 'vote_count.gte': 10,  # чтобы рейтинг имел какой-то смысл,
-                # рассматриваю только те фильмы, которым поставили
-                # оценку больше 10 людей
+                                       # рассматриваю только те фильмы
+                                       # которым поставили оценку
+                                       # больше 10 людей
                 'with_runtime.gte': 60  # длительность фильма больше 60мин
             })
             if len(tmp) == 0:
