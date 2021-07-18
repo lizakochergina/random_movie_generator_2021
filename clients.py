@@ -57,7 +57,6 @@ class GetRandomMovie:
 
         movie_num = -1
         for i in range(len(movies)):
-            print(i, "overview: ", movies[i]['overview'], "  end overview")
             if movies[i]['overview'] != '':
                 movie_num = i
                 break
