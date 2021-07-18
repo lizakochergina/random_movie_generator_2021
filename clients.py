@@ -9,7 +9,7 @@ import matplotlib.ticker as ticker
 
 tmdb = TMDb()
 tmdb.language = 'ru'
-tmdb.api_key = '20b507326d205b1a15c70d92ceb7a749'
+tmdb.api_key = 'tmdb api key'
 
 
 def get_genre_list():
@@ -32,8 +32,8 @@ class GetRandomMovie:
     def __init__(self, genre_codes, raiting):
         self.genre_codes = genre_codes
         self.raiting = raiting
-        self.folder_id = 'b1ghm8nsvtpqj2nql4n9'
-        self.iam_token = 't1.9euelZrJjI-TlsySlZ3Nj5iQxsuLkO3rnpWako2KkZOWlcjNyMeWzZ7MyYzl8_dMODB4-e9KUV9c_t3z9wxnLXj570pRX1z-.rXJqyN-w-Lwpt2YgsvyUOpCjUlUpskZjah_1c00dQmYd7lfMuu7jhMcUxxzyqmLJLfasy7SV5sT2t5S_4MeFCQ'
+        self.folder_id = 'yandex folder id'
+        self.iam_token = 'yandex iam token'
 
     def __call__(self):
         movies = self.discover_movies_with_genres_and_raiting()
