@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>movie</title>
+    <link rel="stylesheet" href="static/styles/style.css">
+</head>
+<body>
+    <section>
+        <h2>{{data['title']}}</h2>
+        <h3>⭐ {{data['raiting']}} ⭐</h3>
+        <p>
+            {% for i in range((data['genres'] |length) - 1) %}
+                {{data['genres'][i]}} |
+            {% endfor %}
+            {{data['genres'][-1]}}
+        </p>
+    </section>
+    <section>
+        <div class="movie_description">
+            <img src="{{data['img']}}" class="movie_img">
+        </div>
+        <div class="movie_description">
+            <p class="p_movie_description">{{data['overview']}}</p>
+            <audio controls><source src="static/audios/audio.ogg"></audio>
+        </div>
+    </section>
+    <section>
+        <div class="div_again"><a class="a_button" href="/">начать заново</a></div>
+    </section>
+    <section>
+        <h3>немного статистики</h3>
+        <p>средний рейтинг фильмов с заданными параметрами - {{data['avr']}}</p>
+        <p>график, который показывает сколько фильмов<br>с заданными параметрами вышло в определенный год</p>
+        <img class="plot" src="static/imgs/plot.png">
+        <p>самый популярный фильм каждого года</p>
+        <table border="3">
+            <tr>
+                <th>год</th>
+                <th>название фильма</th>
+            </tr>
+            {% for year in data['popular_movies'] %}
+                <tr>
+                    <td>{{year}}</td>
+                    <td>{{data['popular_movies'][year]}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </section>
+</body>
+</html>

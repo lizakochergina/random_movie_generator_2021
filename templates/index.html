@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/styles/style.css">
+    <title>main page</title>
+</head>
+<body>
+    <header>
+        <h2 class="h2_main">привет! на этом сайте вы можете указать жанры и минимальный рейтинг,
+            и мы отправим вам рандомный фильм для просмотра.</h2>
+    </header>
+    <main>
+        <div>
+            <form method="POST" action="/movie">
+                <div>
+                {% for i in range(3) %}
+                    <label class="genres">
+                        <input class="checkbox_input" type="checkbox" name="my_checkbox" value="{{genre_list[i]['id']}}">
+                        <div class="checkbox_button"><p class="p_genre_title">{{genre_list[i]['name']}}</p></div>
+                    </label>
+                {% endfor %}
+                </div>
+
+                <div>
+                {% for i in range(3, 7) %}
+                    <label class="genres">
+                        <input class="checkbox_input" type="checkbox" name="my_checkbox" value="{{genre_list[i]['id']}}">
+                        <div class="checkbox_button"><p class="p_genre_title">{{genre_list[i]['name']}}</p></div>
+                    </label>
+                {% endfor %}
+                </div>
+
+                <div>
+                {% for i in range(7, 12) %}
+                    <label class="genres">
+                        <input class="checkbox_input" type="checkbox" name="my_checkbox" value="{{genre_list[i]['id']}}">
+                        <div class="checkbox_button"><p class="p_genre_title">{{genre_list[i]['name']}}</p></div>
+                    </label>
+                {% endfor %}
+                </div>
+
+                <div>
+                {% for i in range(12, 16) %}
+                    <label class="genres">
+                        <input class="checkbox_input" type="checkbox" name="my_checkbox" value="{{genre_list[i]['id']}}">
+                        <div class="checkbox_button"><p class="p_genre_title">{{genre_list[i]['name']}}</p></div>
+                    </label>
+                {% endfor %}
+                </div>
+
+                <div>
+                {% for i in range(16, 19) %}
+                    <label class="genres">
+                        <input class="checkbox_input" type="checkbox" name="my_checkbox" value="{{genre_list[i]['id']}}">
+                        <div class="checkbox_button"><p class="p_genre_title">{{genre_list[i]['name']}}</p></div>
+                    </label>
+                {% endfor %}
+                </div>
+
+                <p>рейтинг (дробное число через точку) <input type="text" name="my_raiting" class="input_raiting"></p>
+                <input type="submit" class="input_submit">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
