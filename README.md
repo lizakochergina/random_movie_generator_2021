@@ -1,5 +1,5 @@
-# random_movie_practice_2021
+# Random Movie Generator
 
-в моем проекте пользователь может выбрать несколько интересующих его жанров и установить минимальный рейтинг, а сайт ему покажет рандомный фильм с заданными параметрами, описание которого можно прослушать. также сайт покажет немного статистики по фильмам с заданными параметрами.
+In my project a user can choose a preferable genres and raiting and then the web-page will show him a random movie according his choice. A user can also listen to the dectription of the movie and can see a block with some statistics.
 
-я использовала themoviedatabase api https://www.themoviedb.org/?language=ru, чтобы искать нужные фильмы, и yandex speechkit, чтобы озвучить описание фильма. для небольшого анализа данных я построила график с помощью библиотек matplotlib и seaborn.
+I used themoviedatabase api https://www.themoviedb.org/?language=ru and yandex speechkit to voice a desctiption of the film.
